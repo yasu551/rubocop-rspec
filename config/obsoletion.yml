@@ -34,3 +34,9 @@ renamed:
   RSpec/Rails/MinitestAssertions: RSpecRails/MinitestAssertions
   RSpec/Rails/NegationBeValid: RSpecRails/NegationBeValid
   RSpec/Rails/TravelAround: RSpecRails/TravelAround
+
+removed:
+  RSpec/Capybara/FeatureMethods:
+    reason: >
+      this cop has migrated to `RSpec/Dialect`. Please use `RSpec/Dialect` instead.
+      in .rubocop.yml file, enable `RSpec/Dialect`.

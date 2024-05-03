@@ -1044,7 +1044,7 @@ end
 | Yes
 | Always
 | 1.33
-| -
+| <<next>>
 |===
 
 Enforces custom RSpec dialects.
@@ -1096,7 +1096,7 @@ end
 | Name | Default value | Configurable values
 
 | PreferredMethods
-| `{}`
+| `{"background"=>"before", "scenario"=>"it", "xscenario"=>"xit", "given"=>"let", "given!"=>"let!", "feature"=>"describe"}`
 | 
 |===
 

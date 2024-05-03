@@ -3,10 +3,10 @@ RSpec:
   Enabled: true
   StyleGuideBaseURL: https://rspec.rubystyle.guide
   DocumentationBaseURL: https://docs.rubocop.org/rubocop-rspec
-  Include: &1
+  Include:
     - "**/*_spec.rb"
     - "**/spec/**/*"
-  Language: &2
+  Language:
     inherit_mode:
       merge:
         - Expectations
@@ -298,8 +298,15 @@ RSpec/DescribedClassModuleWrapping:
 RSpec/Dialect:
   Description: Enforces custom RSpec dialects.
   Enabled: false
-  PreferredMethods: {}
+  PreferredMethods:
+    background: before
+    scenario: it
+    xscenario: xit
+    given: let
+    given!: let!
+    feature: describe
   VersionAdded: '1.33'
+  VersionChanged: "<<next>>"
   Reference: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/Dialect
 
 RSpec/DuplicatedMetadata:
@@ -1005,16 +1012,3 @@ RSpec/Yield:
   Enabled: true
   VersionAdded: '1.32'
   Reference: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/Yield
-
-RSpec/Capybara:
-  Enabled: true
-  Include: *1
-  Language: *2
-
-RSpec/Capybara/FeatureMethods:
-  Description: Checks for consistent method usage in feature specs.
-  Enabled: true
-  EnabledMethods: []
-  VersionAdded: '1.17'
-  VersionChanged: '2.0'
-  Reference: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/Capybara/FeatureMethods
